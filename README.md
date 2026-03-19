@@ -1,3 +1,13 @@
+# DL Lab 2: Stuff Detection
+
+<p align="center">
+  <img src="https://img.shields.io/badge/NumPy-Vectorized_Math-013243?style=flat&logo=numpy&logoColor=white" alt="NumPy"/>
+  <img src="https://img.shields.io/badge/OpenCV-Image_Processing-5C3EE8?style=flat&logo=opencv&logoColor=white" alt="OpenCV"/>
+  <img src="https://img.shields.io/badge/YOLO-v11_|_v12_|_v26-5e8bde?style=flat&logo=ultralytics&logoColor=white" alt="YOLO"/>
+  <img src="https://img.shields.io/badge/ReID-Person_Tracking-9932CC?style=flat" alt="ReID"/>
+  <img src="https://img.shields.io/badge/OCR-Custom-FF1493?style=flat" alt="OCR"/>
+</p>
+
 ### Структура:
 ```
 .
