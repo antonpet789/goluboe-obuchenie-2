@@ -1,42 +1,34 @@
 **Потом**
 
 
-Че-то такое
+### Структура:
 ```
 .
-├── assets
-│   ├── font.bin
-│   ├── loc2cam.json
-│   └── uniloc.json
-├── metadata
-│   ├── trn_meta.csv
-│   └── tst_meta.csv
-├── preprocessing
-│   ├── attn-mask
-│   │   ├── attn-mask.ipynb
-│   │   └── make-median.ipynb
-│   └── meta-extract
-│       └── meta-extract.ipynb
-├── research
-│   ├── mega-median.ipynb
-│   ├── research-0.ipynb
-│   ├── research-1.ipynb
-│   ├── research-2-alpha.ipynb
-│   ├── research-2-beta.ipynb
-│   ├── research-2.ipynb
-│   ├── research-3.ipynb
-│   ├── research-4.ipynb
-│   └── research-5.ipynb
-├── scripts
-│   ├── utils
-│   │   └── restructurer.ipynb
-│   └── visualize
-│       ├── draw_rects.py
-│       ├── log-parser.ipynb
-│       └── plot-loc2num.ipynb
-└── yolo
-    ├── kirill.ipynb
-    └── tracking.ipynb
+├── assets/                     # Файлы для OCR и маппинга
+│   ├── font.bin                # Бинарная маска шрифта камер для OCR
+│   ├── loc2cam.json            # Маппинг локаций в камеры
+│   └── uniloc.json             # Уникальные идентификаторы локаций
+├── metadata/                   # Извлеченные и обработанные метаданные
+│   ├── trn_meta.csv            # Метаданные размеченной выборки (таймстемпы, локации)
+│   └── tst_meta.csv            # Метаданные тестовой выборки
+├── preprocessing/              # Предобработка данных
+│   ├── attn-mask/              # Генерация масок внимания
+│   │   ├── attn-mask.ipynb     # Пайплайн вычисления масок
+│   │   └── make-median.ipynb   # Расчет фоновых медиан для локаций
+│   └── meta-extract/       
+│       └── meta-extract.ipynb  # Быстрый парсинг таймстемпов с кадров
+├── research/                   # Ноутбуки с экспериментами и R&D
+│   ├── research-2*.ipynb       # Итерации разработки алгоритмов OCR
+│   ├── research-[4,5].ipynb    # Итерации разработки алгоритмов масок внимания
+├── scripts/                    # Вспомогательные скрипты
+│   ├── utils/
+│   │   └── restructurer.ipynb  # Утилиты для реструктуризации датасета
+│   └── visualize/
+│       ├── draw_rects.py       # Отрисовка боксов
+│       ├── log-parser.ipynb    # Парсинг логов YOLO и построение графиков (Loss, mAP)
+└── yolo/                       # Обучение и Инференс
+    ├── yolo_train.ipynb        # Пайплайн обучения YOLO (train/val сплит, подготовка yaml)
+    └── tracking.ipynb          # Инференс + REID Voting
 ```
 
 
